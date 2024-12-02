@@ -1,3 +1,4 @@
+import re
 from collections import defaultdict
 
 from atproto import models
@@ -5,32 +6,26 @@ from atproto import models
 from server.logger import logger
 from server.database import db, Post
 
+import redis
+
+r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 
 def operations_callback(ops: defaultdict) -> None:
     # Here we can filter, process, run ML classification, etc.
     # After our feed alg we can save posts into our DB
     # Also, we should process deleted posts to remove them from our DB and keep it in sync
 
-    # for example, let's create our custom feed that will contain all posts that contains alf related text
-
     posts_to_create = []
     for created_post in ops[models.ids.AppBskyFeedPost]['created']:
         author = created_post['author']
         record = created_post['record']
 
-        # print all texts just as demo that data stream works
-        post_with_images = isinstance(record.embed, models.AppBskyEmbedImages.Main)
-        inlined_text = record.text.replace('\n', ' ')
-        logger.info(
-            f'NEW POST '
-            f'[CREATED_AT={record.created_at}]'
-            f'[AUTHOR={author}]'
-            f'[WITH_IMAGE={post_with_images}]'
-            f': {inlined_text}'
-        )
-
-        # only alf-related posts
-        if 'alf' in record.text.lower():
+        # only infosec-related posts
+        regex_str = r.get("infosec_keywords_regex")
+        if regex_str is None:
+            regex_str = r""
+        matches = re.findall(regex_str, record.text, re.IGNORECASE)
+        if len(matches) > 0:
             reply_root = reply_parent = None
             if record.reply:
                 reply_root = record.reply.root.uri

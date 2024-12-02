@@ -2,32 +2,37 @@
 # YOU MUST INSTALL ATPROTO SDK
 # pip3 install atproto
 
+import os
+
+from dotenv import load_dotenv
 from atproto import Client, models
+
+load_dotenv()
 
 # YOUR bluesky handle
 # Ex: user.bsky.social
-HANDLE: str = ''
+HANDLE: str = os.environ.get("HANDLE")
 
 # YOUR bluesky password, or preferably an App Password (found in your client settings)
 # Ex: abcd-1234-efgh-5678
-PASSWORD: str = ''
+PASSWORD: str = os.environ.get("PASSWORD")
 
 # The hostname of the server where feed server will be hosted
 # Ex: feed.bsky.dev
-HOSTNAME: str = ''
+HOSTNAME: str = os.environ.get("HOSTNAME")
 
 # A short name for the record that will show in urls
 # Lowercase with no spaces.
 # Ex: whats-hot
-RECORD_NAME: str = ''
+RECORD_NAME: str = 'infosec'
 
 # A display name for your feed
 # Ex: What's Hot
-DISPLAY_NAME: str = ''
+DISPLAY_NAME: str = 'Infosec'
 
 # (Optional) A description of your feed
 # Ex: Top trending content from the whole network
-DESCRIPTION: str = 'powered by The AT Protocol SDK for Python'
+DESCRIPTION: str = 'An information security/cybersecurity feed based on keywords. Contribute keywords by opening a PR at https://github.com/seanthegeek/bluesky-infosec-feed'
 
 # (Optional) The path to an image to be used as your feed's avatar
 # Ex: ./path/to/avatar.jpeg
@@ -70,7 +75,7 @@ def main():
     ))
 
     print('Successfully published!')
-    print('Feed URI (put in "WHATS_ALF_URI" env var):', response.uri)
+    print('Feed URI (put in "FEED_URI" env var):', response.uri)
 
 
 if __name__ == '__main__':
