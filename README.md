@@ -1,65 +1,36 @@
-## ATProto Feed Generator powered by [The AT Protocol SDK for Python](https://github.com/MarshalX/atproto)
+# A better infosec stream for Bluesky
 
-> Feed Generators are services that provide custom algorithms to users through the AT Protocol.
+One of the unique features of [Bluesky](https://bsky.social) is the ability for anyone to write a program that takes in the firehose of posts and updates from the entire platform, do some analysis, and then return a feed of posts that Bluesky users can use. That way, users can choose which algorithms/feeds they like.
 
-Official overview (read it first): https://github.com/bluesky-social/feed-generator#overview
+After the infosec feed that I was previously using stopped working for a period of four days, I decided to create my own feed. I wasn't sure what the results would look like. It could have been terrible. But, with a little trial and error, I've managed to create an infosec feed that I like better than any other. I hope you like it too. No, seriously, click the like button at [the top of the feed](https://bsky.app/profile/seanthegeek.net/feed/infosec), please. That helps others find this when they search for an infosec feed.
 
-### Getting Started
+## Post criteria
 
-We've set up this simple server with SQLite to store and query data. Feel free to switch this out for whichever database you prefer.
+To be included in this feed, a Bluesky post meed the following criteria:
 
-Next, you will need to do two things:
-1. Implement indexing logic in `server/data_filter.py`.
-2. Implement feed generation logic in `server/algos`.
+- Must be a new post
+- Must not be a reply
+  - Reply posts display the whole thread in the feed, taking up too much room
+  - Reply posts also were also generally unrelated to infosec
+- The post text must contain one or more [keywords](https://github.com/seanthegeek/bluesky-infosec-feed/blob/main/keywords.txt) and/or [case-sensitive keywords](https://github.com/seanthegeek/bluesky-infosec-feed/blob/main/keywords_case_sensitive.txt)
+  - The keyword must be included as a full word, not a part of a word
 
-We've taken care of setting this server up with a did:web. However, you're free to switch this out for did:plc if you like - you may want to if you expect this Feed Generator to be long-standing and possibly migrating domains.
+Most keywords are not case-sensitive. However, some words have different meanings when capitalized. For example, in infosec, the acronym APT means Advanced Persistent Threat. However, apt is also [a word in English](https://www.merriam-webster.com/dictionary/apt) meaning suitable or appropriate. Likewise, in infosec the acronym BEC means Business Email Compromise, but Bec is a shorthand for Rebecca or Becca.
 
-### Publishing your feed
+Some words like exploit, exploited, and vulnerability are also used in posts related to human rights, criminal justice, or politics, so those posts may occasionally appear in this infosec feed.
 
-To publish your feed, go to the script at `publish_feed.py` and fill in the variables at the top. Examples are included, and some are optional. To publish your feed generator, simply run `python publish_feed.py`.
+## Architecture
 
-To update your feed's display data (name, avatar, description, etc.), just update the relevant variables and re-run the script.
+[`load_regex.py`](https://github.com/seanthegeek/bluesky-infosec-feed/blob/main/load_regex.py) downloads the keyword lists from GitHub, converts them into regex patterns, and stores the stores the regex pattern regex strings into a [Redis](https://redis.io/) in-memory cache. A `systemd` timer is used to run `load_regex.py` every minute.
 
-After successfully running the script, you should be able to see your feed from within the app, as well as share it by embedding a link in a post (similar to a quote post).
+The [`server/`](https://github.com/seanthegeek/bluesky-infosec-feed/tree/main/server) directory contains a [Flask](https://flask.palletsprojects.com/en/stable/) based on the [MarshalX/bluesky-feed-generator]( MarshalX/bluesky-feed-generator) GitHub project that collects matching posts from the Bluesky firehose and stores them in a SQLlite database on disk. When someone visits the Infosec feed, the Flask application provides the post details that are needed for the Bluesky client to populate the feed.
 
-### Running the Server
+The filter for posts is located in [`server/data_filter.py`](https://github.com/seanthegeek/bluesky-infosec-feed/blob/main/server/data_filter.py). I have modified this filter so that it reads the regex strings from Redis each time it filters a post. That way, keywords can be updated using a `git` commit, and the Flask application will always use the latest list of keywords without needing to restart the service or worry above file contention race conditions. This ensures that there is no downtime and missed posts when keywords are changed.
 
-Install Python 3.7+, optionally create virtual environment.
+The Flask app in executed as a `systemd` service to ensure that it runs on boot after the Redis service starts and is always restarted in the event of a crash. The Flask app is served by [`waitress`](https://flask.palletsprojects.com/en/stable/deploying/waitress/), which sits behind a NGINX reverse proxy.
 
-Install dependencies:
-```shell
-pip install -r requirements.txt
-```
+Everything runs on a Digital Ocean Droplet with 2 GB of RAM, 1 shared vCPU, and 50 GB of SSD storage for a cost of $12/month. Only 377 MB of RAM and 2.5 GB of storage is in use, so I probably could have gone with the smaller $6/month droplet.
 
-Copy `.env.example` as `.env`. Fill the variables.
+## Pull Requests are welcome
 
-> **Note**
-> To get value for "FEED_URI" you should publish the feed first. 
-
-Run development flask server:
-```shell
-flask run
-```
-
-Run development server with debug:
-```shell
-flask --debug run
-```
-> **Note**
-> Duplication of data stream instances in debug mode is fine. 
-> Read warn below.
-
-> **Warning**
-> In production, you should use production WSGI server instead.
-
-> **Warning**
-> If you want to run server in many workers, you should run Data Stream (Firehose) separately.
-
-Endpoints:
-- /.well-known/did.json
-- /xrpc/app.bsky.feed.describeFeedGenerator
-- /xrpc/app.bsky.feed.getFeedSkeleton
-
-### License
-
-MIT
+If you think keywords should be added or removed, or would like to change the algorithm, feel free to submit a Pull Request (PR) for me to consider merging.
