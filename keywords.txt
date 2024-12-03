@@ -108,6 +108,8 @@ osint
 owasp
 password spray
 passwordspray
+patch tuesday
+patchtuesday
 pentent
 pentesting
 phish
