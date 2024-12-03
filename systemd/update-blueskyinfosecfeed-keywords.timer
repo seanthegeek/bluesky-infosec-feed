@@ -6,7 +6,7 @@ After=network.target network-online.target redis-server.service
 
 [Timer]
 OnBootSec=1min
-OnCalendar=*:0/5
+OnCalendar=*:0/1
 
 [Install]
 WantedBy=timers.target
