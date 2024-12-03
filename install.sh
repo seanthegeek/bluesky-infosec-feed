@@ -10,17 +10,17 @@ echo "Installing redis..."
 sudo apt install -y redis
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
-if id blueskyunfosecfeed >/dev/null 2>&1; then
-    echo "blueskyinfosecfeed user already exists."
-else
-    echo "creating blueskyinfosecfeed user..."
-    sudo useradd -sm blueskyinfosecfeed -b /opt
+if [ ! -d "/opt/blueskyinfosecfeed/" ]; then
+     echo "creating blueskyinfosecfeed user..."
+     sudo useradd -r -m blueskyinfosecfeed -b /opt
 fi
-sudo cd ~blueskyinfosecfeed
+
+fi
+cd ~blueskyinfosecfeed
 if [ ! -d "bluesky-infosec-feed" ]; then
-  sudo -u blueskyinfosecfeed git clone https://github.com/seanthegeek/bluesky-infosec-feed
+    sudo -u blueskyinfosecfeed git clone https://github.com/seanthegeek/bluesky-infosec-feed
 fi
-sudo cd bluesky-infosec-feed
+cd bluesky-infosec-feed
 sudo -u blueskyinfosecfeed git pull
 sudo cp systemd/* /etc/systemd/system/
 sudo systemctl daemon-reload
