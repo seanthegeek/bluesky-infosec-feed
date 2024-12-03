@@ -21,9 +21,10 @@ if [ ! -d "bluesky-infosec-feed" ]; then
 fi
 cd bluesky-infosec-feed
 sudo -u blueskyinfosecfeed git pull
+sudo -u blueskyinfosecfeed setupvenv.sh
 sudo cp systemd/* /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable blueskyinfosecfeed.service
-sudo systemctl start blueskyinfosecfeed.service
+sudo systemctl restart blueskyinfosecfeed.service
 sudo systemctl enable update-blueskyinfosecfeed.timer
-sudo systemctl start update-blueskyinfosecfeed.timer
+sudo systemctl restart update-blueskyinfosecfeed.timer
