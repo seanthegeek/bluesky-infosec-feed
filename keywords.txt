@@ -2,6 +2,7 @@
 0day
 apt
 att&ck
+backdoor
 bec
 blue team
 blueteaming
@@ -30,6 +31,9 @@ cyber threat
 cyber threats
 dkim
 dmarc
+email compromise
+exfil
+exfiltration
 exploit
 exploits
 extortion site
@@ -41,16 +45,19 @@ ida pro
 idapro
 infosec
 infosecurity
+information stealer
 infostealer
 kerberoasting
 leak site
 lolbins
 lolbras
+malvertizing
 malware
 mitre
 n-day
 ncsc
 nday
+owasp
 pentent
 pentesting
 phish
@@ -72,7 +79,6 @@ smish
 smishing
 soc
 social engineering
-social engineering
 spyware
 sql injection
 suricata
@@ -86,6 +92,8 @@ virustotal
 vishing
 vulnerabilities
 vulnerability
+webshell
+web shell
 xss
 yara
 zero day
