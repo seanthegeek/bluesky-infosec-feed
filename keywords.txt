@@ -69,6 +69,7 @@ password spray
 pentent
 pentesting
 phish
+phishers
 phishing
 purple team
 purple teaming
@@ -83,6 +84,10 @@ shodan
 siem
 sigma rule
 sigma rules
+sim swap
+simswap
+sim swapping 
+simswapping
 smish
 smishing
 soc
