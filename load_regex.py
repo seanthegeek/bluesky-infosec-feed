@@ -5,7 +5,19 @@ import redis
 
 from server.logger import logger
 
-KEYWORDS_FILE_URL = "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords.txt"
+r = redis.Redis(host='localhost', port=6379, decode_responses=True)
+
+KEYWORD_LISTS = [{
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords.txt",
+    "filename": "keywords.txt",
+    "redis_key": "infosec_keywords_regex"
+},
+{
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords_case_sensitive.txt",
+    "filename": "keywords_case_sensitive.txt",
+    "redis_key": "infosec_keywords_case_sensitive_regex"
+}]
+
 
 def _create_regex_string(input_str: str):
     regex_str = r""
@@ -17,19 +29,26 @@ def _create_regex_string(input_str: str):
     regex_str = regex_str.rstrip("|")
     return regex_str
 
-def main():
+
+def load_regex(url, filename, redis_key):
     keywords_str = ""
     try:
-        keywords_response = requests.get(KEYWORDS_FILE_URL)
+        keywords_response = requests.get(url)
         keywords_response.raise_for_status()
         keywords_str = keywords_response.text
     except Exception as e:
-        logger.error(f"Failed to download {KEYWORDS_FILE_URL} - falling back to local file")
-    with open("keywords.txt") as keywords_file:
+        logger.error(f"Failed to download {url} - falling back to local file {filename}")
+    with open(filename) as keywords_file:
         keywords_str = keywords_file.read()
     regex_str = _create_regex_string(keywords_str)
-    r = redis.Redis(host='localhost', port=6379, decode_responses=True)
-    r.set("infosec_keywords_regex", regex_str)
+    r.set(redis_key, regex_str)
+
+
+def main():
+    for keyword_list in KEYWORD_LISTS:
+        load_regex(keyword_list["url"], keyword_list["filename"],
+                   keyword_list["redis_key"])
+
 
 if __name__ == "__main__":
     main()
