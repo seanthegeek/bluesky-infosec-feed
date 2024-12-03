@@ -5,7 +5,7 @@ import redis
 
 from server.logger import logger
 
-#r = redis.Redis(host='localhost', port=6379, decode_responses=True)
+r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 
 KEYWORD_LISTS = [{
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords.txt",
@@ -41,7 +41,7 @@ def load_regex(url, filename, redis_key):
         with open(filename) as keywords_file:
             keywords_str = keywords_file.read()
     regex_str = _create_regex_string(keywords_str)
-    #r.set(redis_key, regex_str)
+    r.set(redis_key, regex_str)
 
 
 def main():
