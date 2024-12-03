@@ -23,12 +23,11 @@ def operations_callback(ops: defaultdict) -> None:
         # only infosec-related posts
         regex_str = r.get("infosec_keywords_regex")
         case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
-        if regex_str is None:
-            regex_str = r""
-        if case_sensitive_regex_str is None:
-            case_sensitive_regex_str = ""
-        matches = re.findall(regex_str, record.text, re.IGNORECASE)
-        matches += re.findall(case_sensitive_regex_str, record.text)
+        matches = []
+        if regex_str is not None:
+            matches += re.findall(regex_str, record.text, re.IGNORECASE)
+        if case_sensitive_regex_str is not None:
+            matches += re.findall(case_sensitive_regex_str, record.text)
         # Ignore reply posts. Too many false positives.
         if len(matches) > 0 and not record.reply:
             reply_root = reply_parent = None
@@ -42,6 +41,7 @@ def operations_callback(ops: defaultdict) -> None:
                 'reply_parent': reply_parent,
                 'reply_root': reply_root,
             }
+            logger.debug(record.text)
             posts_to_create.append(post_dict)
 
     posts_to_delete = ops[models.ids.AppBskyFeedPost]['deleted']
