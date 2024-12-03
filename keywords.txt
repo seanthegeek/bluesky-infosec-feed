@@ -90,7 +90,6 @@ sim swapping
 simswapping
 smish
 smishing
-soc
 social engineering
 spyware
 sql injection

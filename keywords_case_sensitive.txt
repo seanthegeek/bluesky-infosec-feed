@@ -2,5 +2,6 @@ APT
 BEC
 MaaS
 RaaS
+SOC
 TTP
 TTPs
