@@ -1,9 +1,11 @@
+
 0-day
 0day
 att&ck
 backdoor
 bec
 blue team
+blueteam
 blueteaming
 bootkit
 bootkits
@@ -12,11 +14,26 @@ breached
 breaches
 bsides
 bug bounties
+bugbounties
 bug bounty
+bugbounty
+business email compromise
+businessemailcompromise
 cenys
 cisa
 ciso
-cve
+computer forensic
+computerforensic
+computer forensics
+computerforensics
+credential harvest
+credentialharvest
+credential harvesting
+credentialharvesting
+cred harvest
+credharvest
+cred harvesting
+credharvesting
 cve
 cves
 cyber attack
@@ -26,19 +43,36 @@ cyberattacks
 cyber crime
 cybercrime
 cyber criminal
+cybercriminal
 cyber criminals
 cybercriminals
-cybercriminals
+cyber forensic
+cyberforensic
+cyber forensics
+cyberforensics
+cyber intel
+cyberintel
+cyber intelligence
+cyberintelligence
+cyber law
+cyberlaw
 cybersec
 cyber security
 cybersecurity
 cyber threat
+cyberthreat
 cyber threats
+cyberthreats
 dark web
 darkweb
+digital forensic
+digitalforensic
+digital forensics
+digitalforensics
 dkim
 dmarc
 email compromise
+emailcompromise
 exfil
 exfiltration
 exploit
@@ -51,12 +85,17 @@ hackers
 ida pro
 idapro
 information stealer
+informationstealer
 infosec
 infosecurity
 infostealer
 kerberoasting
 leak site
+leaksite
+leaksite
+lolbin
 lolbins
+lolbra
 lolbras
 malvertizing
 malware
@@ -64,15 +103,19 @@ mitre
 ncsc
 n-day
 nday
+osint
 owasp
 password spray
+passwordspray
 pentent
 pentesting
 phish
 phishers
 phishing
 purple team
+purpleteam
 purple teaming
+purpleteaming
 ransomware
 red team
 redteaming
@@ -80,10 +123,16 @@ remnux
 rootkit
 rootkits
 security awareness
+securityawareness
+shame site
+shame-site
+shamesite
 shodan
 siem
 sigma rule
+sigmarule
 sigma rules
+sigmarules
 sim swap
 simswap
 sim swapping 
@@ -93,11 +142,14 @@ smishing
 social engineering
 spyware
 sql injection
+sqlinjection
 suricata
 threat actor
 threat actors
 threat intel
+threatintel
 threat intelligence
+threatintelligence
 tor
 virus total
 virustotal
@@ -110,3 +162,4 @@ xss
 yara
 zero day
 zero-day
+zeroday
