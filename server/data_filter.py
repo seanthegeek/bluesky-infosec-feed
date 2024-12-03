@@ -25,7 +25,8 @@ def operations_callback(ops: defaultdict) -> None:
         if regex_str is None:
             regex_str = r""
         matches = re.findall(regex_str, record.text, re.IGNORECASE)
-        if len(matches) > 0:
+        # Ignore reply posts. Too many false positives.
+        if len(matches) > 0 and not record.reply:
             reply_root = reply_parent = None
             if record.reply:
                 reply_root = record.reply.root.uri
