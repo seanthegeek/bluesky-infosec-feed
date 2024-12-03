@@ -7,6 +7,6 @@ After=network.target network-online.target redis-server.service
 [Service]
 Type=oneshot
 WorkingDirectory=/opt/blueskyinfosecfeed/bluesky-infosec-feed
-ExecStart=/opt/blueskyinfosecfeed/venv/bin/python3 load_regex.py
+ExecStart=/opt/blueskyinfosecfeed/bluesky-infosec-feed/venv/bin/python3 load_regex.py
 User=blueskyinfosecfeed
 Group=blueskyinfosecfeed
