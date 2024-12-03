@@ -1,6 +1,5 @@
 0-day
 0day
-apt
 att&ck
 backdoor
 bec
