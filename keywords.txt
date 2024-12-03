@@ -43,9 +43,9 @@ hacker
 hackers
 ida pro
 idapro
+information stealer
 infosec
 infosecurity
-information stealer
 infostealer
 kerberoasting
 leak site
@@ -54,8 +54,8 @@ lolbras
 malvertizing
 malware
 mitre
-n-day
 ncsc
+n-day
 nday
 owasp
 pentent
@@ -92,8 +92,8 @@ virustotal
 vishing
 vulnerabilities
 vulnerability
-webshell
 web shell
+webshell
 xss
 yara
 zero day
