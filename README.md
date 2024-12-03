@@ -6,7 +6,7 @@ After the infosec feed that I was previously using stopped working for a period 
 
 ## Post criteria
 
-To be included in this feed, a Bluesky post meed the following criteria:
+To be included in this feed, a Bluesky post meet the following criteria:
 
 - Must be a new post
 - Must not be a reply
