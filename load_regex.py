@@ -38,8 +38,8 @@ def load_regex(url, filename, redis_key):
         keywords_str = keywords_response.text
     except Exception as e:
         logger.error(f"Failed to download {url} - {e}. Falling back to local file {filename}.")
-    with open(filename) as keywords_file:
-        keywords_str = keywords_file.read()
+        with open(filename) as keywords_file:
+            keywords_str = keywords_file.read()
     regex_str = _create_regex_string(keywords_str)
     r.set(redis_key, regex_str)
 
