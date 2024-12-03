@@ -8,8 +8,8 @@ echo "Installing python3-virtualenv..."
 sudo apt install -y python3-virtualenv
 echo "Installing redis..."
 sudo apt install -y redis
-sudo sysctl enable redis-server
-sudo sysctl start redis-server
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
 if id blueskyunfosecfeed >/dev/null 2>&1; then
     echo "blueskyinfosecfeed user already exists."
 else
