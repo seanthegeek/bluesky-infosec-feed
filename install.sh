@@ -15,7 +15,6 @@ if [ ! -d "/opt/blueskyinfosecfeed/" ]; then
      sudo useradd -r -m blueskyinfosecfeed -b /opt
 fi
 
-fi
 cd ~blueskyinfosecfeed
 if [ ! -d "bluesky-infosec-feed" ]; then
     sudo -u blueskyinfosecfeed git clone https://github.com/seanthegeek/bluesky-infosec-feed
