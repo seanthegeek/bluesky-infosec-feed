@@ -5,7 +5,7 @@ import redis
 
 from server.logger import logger
 
-KEYWORDS_FILE_URL = "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/requirements.txt"
+KEYWORDS_FILE_URL = "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords.txt"
 
 def _create_regex_string(input_str: str):
     regex_str = r""
