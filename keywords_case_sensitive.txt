@@ -1,2 +1,6 @@
 APT
 BEC
+MaaS
+RaaS
+TTP
+TTPs
