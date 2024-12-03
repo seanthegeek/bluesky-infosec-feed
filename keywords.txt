@@ -90,6 +90,8 @@ informationstealer
 infosec
 infosecurity
 infostealer
+kali linux
+kalilinux
 kerberoasting
 leak site
 leaksite
