@@ -22,9 +22,13 @@ def operations_callback(ops: defaultdict) -> None:
 
         # only infosec-related posts
         regex_str = r.get("infosec_keywords_regex")
+        case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
         if regex_str is None:
             regex_str = r""
+        if case_sensitive_regex_str is None:
+            case_sensitive_regex_str = ""
         matches = re.findall(regex_str, record.text, re.IGNORECASE)
+        matches += re.findall(case_sensitive_regex_str, record.text)
         # Ignore reply posts. Too many false positives.
         if len(matches) > 0 and not record.reply:
             reply_root = reply_parent = None
