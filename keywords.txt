@@ -7,6 +7,9 @@ blue team
 blueteaming
 bootkit
 bootkits
+breach
+breached
+breaches
 bsides
 bug bounties
 bug bounty
@@ -46,6 +49,7 @@ lolbras
 malware
 mitre
 n-day
+ncsc
 nday
 pentent
 pentesting
