@@ -19,6 +19,10 @@ ciso
 cve
 cve
 cves
+cyber attack
+cyberattack
+cyber attacks
+cyberattacks
 cyber crime
 cybercrime
 cyber criminals
