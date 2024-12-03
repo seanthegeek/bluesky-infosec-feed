@@ -61,6 +61,7 @@ ncsc
 n-day
 nday
 owasp
+password spray
 pentent
 pentesting
 phish
