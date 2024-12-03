@@ -30,6 +30,8 @@ credential harvest
 credentialharvest
 credential harvesting
 credentialharvesting
+credential theft
+credentialtheft
 cred harvest
 credharvest
 cred harvesting
@@ -120,6 +122,10 @@ ransomware
 red team
 redteaming
 remnux
+reverse engineer
+reverseengineer
+reverse engineering
+reverseengineering
 rootkit
 rootkits
 security awareness
