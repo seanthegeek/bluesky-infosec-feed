@@ -48,6 +48,8 @@ cyber criminal
 cybercriminal
 cyber criminals
 cybercriminals
+cyber espionage
+cyberespionage
 cyber forensic
 cyberforensic
 cyber forensics
@@ -67,6 +69,11 @@ cyber threats
 cyberthreats
 dark web
 darkweb
+data leak
+dataleak
+data leaked
+dataleaked
+data stolen
 ddos
 digital forensic
 digitalforensic
@@ -76,6 +83,10 @@ dkim
 dmarc
 email compromise
 emailcompromise
+email leak
+emailleak
+emails leaked
+emailsleaked
 exfil
 exfiltration
 exploit
@@ -95,8 +106,11 @@ infostealer
 kali linux
 kalilinux
 kerberoasting
+leaked email
+leakedemail
+leaked emails
+leakedemails
 leak site
-leaksite
 leaksite
 lolbin
 lolbins
@@ -157,6 +171,18 @@ sociallyengineered
 spyware
 sql injection
 sqlinjection
+stole data
+stoledata
+stole email
+stoleemail
+stole emails
+stoleemails
+stolen data
+stolendata
+stolen email
+stolenemail
+stolen emails
+stolenemails
 suricata
 threat actor
 threat actors
