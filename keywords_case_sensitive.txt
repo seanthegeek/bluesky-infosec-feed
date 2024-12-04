@@ -1,6 +1,8 @@
 APT
 BEC
+CERT
 DLP
+ISAC
 MaaS
 RaaS
 SOC
