@@ -2,7 +2,9 @@
 
 One of the unique features of [Bluesky](https://bsky.social) is the ability for anyone to write a program that takes in the firehose of posts and updates from the entire platform, do some analysis, and then return a feed of posts that Bluesky users can use. That way, users can choose which algorithms/feeds they like.
 
-After the infosec feed that I was previously using stopped working for a period of four days, I decided to create my own feed. I wasn't sure what the results would look like. It could have been terrible. But, with a little trial and error, I've managed to create an infosec feed that I like better than any other. I hope you like it too. No, seriously, click the like button at [the top of the feed](https://bsky.app/profile/seanthegeek.net/feed/infosec), please. That helps others find this when they search for an infosec feed.
+I decided to create my own feed. I wasn't sure what the results would look like. It could have been terrible. But, with a little trial and error, I've managed to create an infosec feed that I like better than any other. I hope you like it too. No, seriously, click the like button at [the top of the feed](https://bsky.app/profile/seanthegeek.net/feed/infosec), please. That helps others find this when they search for an infosec feed.
+
+I've found that Bluesky feeds are best viewed on [deck.blue](https://deck.blue), a third-party web client for Bluesky that organizes feeds into aut-refreshing columns, Tweetdeck-style.
 
 ## Post criteria
 
