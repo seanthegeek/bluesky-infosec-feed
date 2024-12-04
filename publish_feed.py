@@ -24,22 +24,22 @@ HOSTNAME: str = os.environ.get("HOSTNAME")
 # A short name for the record that will show in urls
 # Lowercase with no spaces.
 # Ex: whats-hot
-RECORD_NAME: str = 'infosec'
+RECORD_NAME: str = os.environ.get("RECORD_NAME")
 
 # A display name for your feed
 # Ex: What's Hot
-DISPLAY_NAME: str = 'Infosec'
+DISPLAY_NAME: str = os.environ.get("DISPLAY_NAME")
 
 # (Optional) A description of your feed
 # Ex: Top trending content from the whole network
-DESCRIPTION: str = 'An information security/cybersecurity feed based on keywords. Contribute keywords by opening a PR at https://github.com/seanthegeek/bluesky-infosec-feed'
+DESCRIPTION: str = os.environ.get("DESCRIPTION")
 
 # (Optional) The path to an image to be used as your feed's avatar
 # Ex: ./path/to/avatar.jpeg
-AVATAR_PATH: str = ''
+AVATAR_PATH: str = os.environ.get("AVATAR_PATH")
 
 # (Optional). Only use this if you want a service did different from did:web
-SERVICE_DID: str = ''
+SERVICE_DID: str = os.environ.get("SERVICE_DID")
 
 
 # -------------------------------------
