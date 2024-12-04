@@ -17,7 +17,7 @@ To be included in this feed, a Bluesky post meet the following criteria:
 
 Most keywords are not case-sensitive. However, some words have different meanings when capitalized. For example, in infosec, the acronym APT means Advanced Persistent Threat. However, apt is also [a word in English](https://www.merriam-webster.com/dictionary/apt) meaning suitable or appropriate. Likewise, in infosec the acronym BEC means Business Email Compromise, but Bec is a shorthand for Rebecca, Becca, or because.
 
-Some words like exploit, exploited, and vulnerability are also used in posts related to human rights, criminal justice, or politics, so those posts may occasionally appear in this infosec feed. Phish is is a malicious email and [a band](https://en.wikipedia.org/wiki/Phish) from 1983. Breach can also also a verb that describes whales surfacing from water. You get the idea.
+Some words like exploit, exploited, and vulnerability are also used in posts related to human rights, criminal justice, or politics, so those posts may occasionally appear in this infosec feed. Phish is is a malicious email and [a band](https://en.wikipedia.org/wiki/Phish) from 1983. Breach is also also a verb that describes whales surfacing from water. You get the idea.
 
 ## Architecture
 
