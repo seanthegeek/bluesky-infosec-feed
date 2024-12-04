@@ -150,6 +150,9 @@ simswapping
 smish
 smishing
 social engineering
+socialengineering
+socially engineered
+sociallyengineered
 spyware
 sql injection
 sqlinjection
