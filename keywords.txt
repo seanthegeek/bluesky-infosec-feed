@@ -2,7 +2,6 @@
 0day
 att&ck
 backdoor
-bec
 blue team
 blueteam
 blueteaming
