@@ -68,7 +68,7 @@ socia(ally) ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
-threat ?(actors|intel(ligence)?)
+threat ?(actors?|intel(ligence)?)
 tor
 virus ?total
 vulnerabilit(y|ies)
