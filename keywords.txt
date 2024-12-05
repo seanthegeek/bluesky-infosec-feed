@@ -25,7 +25,7 @@ ghidra
 hack(ed)?
 hackers?
 ida ?pro
-info{rmation}? ?stealer
+info{rmation}? ?(security|stealer)
 infosec(urity)?
 iotsec
 kali ?linux
