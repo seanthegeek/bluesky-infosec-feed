@@ -14,9 +14,9 @@ cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
 cves?
 (data|files?|emails?|documents?|photos?|images?|calls?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stole(n)?|compromised?)
 ddos
+devsec(ops)?
 dkim
 dmarc
-devsec(ops)?
 exfil(tration|trates)?
 exploits?
 extortion ?sites?
@@ -39,8 +39,9 @@ malware
 mitre
 ncsc
 n-?day
+opsec
 osint
-ocset
+otsec
 owasp
 password ?spray
 patch ?tuesday
