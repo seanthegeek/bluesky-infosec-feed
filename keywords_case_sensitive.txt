@@ -1,10 +1,9 @@
-APT
+APTs?
 BEC
-CERT
+CERTs?
 DLP
-ISAC
+ISACs?
 MaaS
 RaaS
 SOC
-TTP
-TTPs
+TTPs?
