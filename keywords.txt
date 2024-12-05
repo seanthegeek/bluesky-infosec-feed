@@ -100,6 +100,8 @@ hacker
 hackers
 ida pro
 idapro
+incident response
+incidentresponse
 information stealer
 informationstealer
 infosec
@@ -107,6 +109,8 @@ infosecurity
 infostealer
 iot security
 iotsecurity
+ir team
+irteam
 kali linux
 kalilinux
 kerberoasting
