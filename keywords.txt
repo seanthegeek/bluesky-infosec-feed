@@ -22,6 +22,7 @@ exploits?
 extortion ?sites?
 firewall
 ghidra
+hack(ed)?
 hackers?
 ida ?pro
 info{rmation}? ?stealer
