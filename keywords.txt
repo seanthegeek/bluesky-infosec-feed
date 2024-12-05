@@ -75,6 +75,8 @@ data leaked
 dataleaked
 data stolen
 ddos
+devsec
+devsecops
 digital forensic
 digitalforensic
 digital forensics
@@ -103,6 +105,8 @@ informationstealer
 infosec
 infosecurity
 infostealer
+iot security
+iotsecurity
 kali linux
 kalilinux
 kerberoasting
@@ -123,6 +127,8 @@ ncsc
 n-day
 nday
 osint
+ot security
+otsecurity
 owasp
 password spray
 passwordspray
