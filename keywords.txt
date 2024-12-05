@@ -29,13 +29,19 @@ computerforensics
 credential harvest
 credentialharvest
 credential harvesting
+credential stolen
+credentialstolen
 credentialharvesting
+credentials stolen
+credentialsstolen
 credential theft
 credentialtheft
 cred harvest
 credharvest
 cred harvesting
 credharvesting
+cred theft
+credtheft
 cve
 cves
 cyber attack
@@ -114,6 +120,12 @@ irteam
 kali linux
 kalilinux
 kerberoasting
+leaked credential
+leakedcredential
+leaked credentials
+leakedcredentials
+leaked data
+leakeddata
 leaked email
 leakedemail
 leaked emails
