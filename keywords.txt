@@ -25,16 +25,11 @@ firewall
 ghidra
 hackers?
 ida ?pro
-idapro
 info{rmation}? ?stealer
 infosec(urity)?
 iotsec
 kali ?linux
 kerberoasting
-leaked email
-leakedemail
-leaked emails
-leakedemails
 (leak(ed)?|stole(n)?|compromised?) ?(data|files?|emails?|documents?|photos?|images|calls?|texts|sms|recordings?|videos?|cred(ential)?s?)
 leak ?site
 lolbins?
