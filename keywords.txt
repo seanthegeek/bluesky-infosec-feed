@@ -9,7 +9,7 @@ business ?email ?compromise
 cenys
 cisa
 ciso
-(cloud|cyber|computer|network|digital) ?(security|crime|criminals?|attacks?|sec|law|forensics|espionage|threats?|intel(igence)?)
+(cloud|cyber|computer|network|digital) ?(security|crime|criminals?|attacks?|sec|law|forensics|espionage|threats?|incidents?|intel(igence)?)
 cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
 cves?
 (data|files?|emails?|documents?|photos?|images?|calls?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stole(n)?|compromised?)
