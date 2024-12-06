@@ -51,7 +51,6 @@ patch ?tuesday
 pentest(ing)?
 (ph|sm|v)ish(ing|er|ers)?
 ransomware
-red ?team(ing)?
 remnux
 reverse ?engineer(ing)?
 rootkits?
