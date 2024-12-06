@@ -52,8 +52,7 @@ def run(name, operations_callback, stream_stop_event=None):
             _run(name, operations_callback, stream_stop_event)
         except FirehoseError as e:
             # here we can handle different errors to reconnect to firehose
-            logger.error(f"{e} - Reconnecting to the firehose")
-            _run(name, operations_callback, stream_stop_event)
+            logger.error(f"{e} - Reconnecting to the firehose...")
 
 
 def _run(name, operations_callback, stream_stop_event=None):
