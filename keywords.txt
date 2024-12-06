@@ -1,17 +1,19 @@
 att&ck
 backdoor
 bide
-blue ?team(ing)?
+(blue|red|purple) ?team(ing)?
 bootkits?
 breach(ed|es)?
+bsides
 bug ?bount(y|ies)
 business ?email ?compromise
 cenys
 cisa
 ciso
-(cloud|cyber|computer|network|digital) ?(security|crime|criminals?|attacks?|sec|law|forensics|espionage|threats?|incidents?|intel(igence)?)
+(cloud|cyber|computer|network|digital|ot|iot) ?(security|crime|criminals?|attacks?|sec|law|forensics?|espionage|threats?|incidents?|intel(ligence)?)
 cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
 cves?
+dark ?web
 ddos
 devsec(ops)?
 dkim
@@ -24,9 +26,10 @@ ghidra
 hacked
 hackers?
 ida ?pro
-info{rmation}? ?(security|stealer)
+info(rmation)? ?(security|stealer)
 infosec(urity)?
 iotsec
+(incident response|ir) ?team
 kali ?linux
 kerberoasting
 (leak(ed)?|stole(n)?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
@@ -47,18 +50,16 @@ password ?spray
 patch ?tuesday
 pentest(ing)?
 (ph|sm|v)ish(ing|er|ers)?
-purple ?team(ing)?
 ransomware
 red ?team(ing)?
 remnux
-reverse ?engineer(ing)?
 rootkits?
 security ?awareness
 shame[ -]?sites?
 shodan
 siem
 sigma ?rules?
-sim ?swap(ing)?
+sim ?swapp(ing)?
 social(ally) ?engineer(ing|ed)?
 spyware
 sql ?injection
