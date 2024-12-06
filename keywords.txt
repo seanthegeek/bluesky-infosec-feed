@@ -1,9 +1,9 @@
 att&ck
 backdoor
+bide
 blue ?team(ing)?
 bootkits?
 breach(ed|es)?
-bide
 bug ?bount(y|ies)
 business ?email ?compromise
 cenys
@@ -12,7 +12,6 @@ ciso
 (cloud|cyber|computer|network|digital) ?(security|crime|criminals?|attacks?|sec|law|forensics|espionage|threats?|incidents?|intel(igence)?)
 cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
 cves?
-((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stole|compromised?)
 ddos
 devsec(ops)?
 dkim
@@ -36,6 +35,7 @@ lolbins?
 lolbras?
 malvertizing
 malware
+((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stole|compromised?)
 mitre
 ncsc
 n-?day
