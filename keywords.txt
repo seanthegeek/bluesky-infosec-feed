@@ -59,7 +59,7 @@ shodan
 siem
 sigma ?rules?
 sim ?swap(ing)?
-socia(ally) ?engineer(ing|ed)?
+social(ally) ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
