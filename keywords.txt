@@ -26,7 +26,7 @@ ghidra
 hacked
 hackers?
 ida ?pro
-(incident ?response|ir teams?)
+(incident ?response|ir ?teams?)
 info(rmation)? ?(security|stealer)
 infosec(urity)?
 iotsec
@@ -60,7 +60,7 @@ shodan
 siem
 sigma ?rules?
 sim ?swap(ping)?
-social(ally)? ?engineer(ing|ed)?
+social(ly)? ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
