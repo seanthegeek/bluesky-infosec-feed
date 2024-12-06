@@ -26,10 +26,10 @@ ghidra
 hacked
 hackers?
 ida ?pro
+(incident response|ir) ?team
 info(rmation)? ?(security|stealer)
 infosec(urity)?
 iotsec
-(incident response|ir) ?team
 kali ?linux
 kerberoasting
 (leak(ed)?|stole(n)?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
