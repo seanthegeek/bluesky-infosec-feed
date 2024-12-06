@@ -65,7 +65,6 @@ spyware
 sql ?injection
 suricata
 threat ?(actors?|intel(ligence)?)
-tor
 virus ?total
 vulnerabilit(y|ies)
 web ?shell
