@@ -26,19 +26,19 @@ ghidra
 hacked
 hackers?
 ida ?pro
-(incident response|ir) ?team
+(incident ?response|ir)
 info(rmation)? ?(security|stealer)
 infosec(urity)?
 iotsec
 kali ?linux
 kerberoasting
-(leak(ed)?|stole(n)?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
+(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
 leak ?site
 lolbins?
 lolbras?
 malvertizing
 malware
-((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stole|compromised?)
+((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stolen?|compromised?)
 mitre
 ncsc
 n-?day
@@ -53,14 +53,15 @@ pentest(ing)?
 ransomware
 red ?team(ing)?
 remnux
+reverse ?engineer(ing)?
 rootkits?
 security ?awareness
 shame[ -]?sites?
 shodan
 siem
 sigma ?rules?
-sim ?swapp(ing)?
-social(ally) ?engineer(ing|ed)?
+sim ?swap(ping)?
+social(ally)? ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
