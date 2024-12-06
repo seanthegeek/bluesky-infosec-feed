@@ -3,7 +3,7 @@ backdoor
 blue ?team(ing)?
 bootkits?
 breach(ed|es)?
-bsides
+bide
 bug ?bount(y|ies)
 business ?email ?compromise
 cenys
@@ -45,9 +45,8 @@ otsec
 owasp
 password ?spray
 patch ?tuesday
-pentent(ing)?
+pentest(ing)?
 (ph|sm|v)ish(ing|er|ers)?
-purpleteam
 purple ?team(ing)?
 ransomware
 red ?team(ing)?
