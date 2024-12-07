@@ -1,3 +1,4 @@
+import datetime
 import re
 from collections import defaultdict
 
@@ -9,6 +10,15 @@ from server.database import db, Post
 import redis
 
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
+
+
+def is_archive_record(record):
+    archived_threshold = datetime.timedelta(minutes=5)
+    created_at = datetime.datetime.fromisoformat(record.created_at)
+    now = datetime.datetime.now(datetime.UTC)
+
+    return now - created_at >= archived_threshold
+
 
 def operations_callback(ops: defaultdict) -> None:
     # Here we can filter, process, run ML classification, etc.
@@ -29,7 +39,7 @@ def operations_callback(ops: defaultdict) -> None:
         if case_sensitive_regex_str is not None:
             matches += re.findall(case_sensitive_regex_str, record.text)
         # Ignore reply posts. Too many false positives.
-        if len(matches) > 0 and not record.reply:
+        if len(matches) > 0 and not (record.reply or is_archive_record(record)):
             reply_root = reply_parent = None
             if record.reply:
                 reply_root = record.reply.root.uri
