@@ -41,7 +41,7 @@ def operations_callback(ops: defaultdict) -> None:
         # only infosec-related posts
         regex_str = r.get("infosec_keywords_regex")
         case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
-        vendors_regex_str = r.get("infosec_keywords_vendors_regex", None)
+        vendors_regex_str = r.get("infosec_keywords_vendors_regex")
         matches = []
         if regex_str is not None:
             matches += re.findall(regex_str, record.text, re.IGNORECASE)
