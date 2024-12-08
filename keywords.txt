@@ -1,3 +1,4 @@
+(adversary|man)[- ]?in[- ]?the[- ]?(middle|mailbox)
 att&ck
 backdoor
 bide
@@ -46,8 +47,10 @@ opsec
 osint
 otsec
 owasp
+packet capture
 password ?spray
 patch ?tuesday
+pcap
 pentest(ing)?
 (ph|sm|v)ish(ing|er|ers)?
 ransomware
@@ -68,6 +71,7 @@ threat ?(actors?|intel(ligence)?)
 virus ?total
 vulnerabilit(y|ies)
 web ?shell
+wireshark
 xss
 yara
 (zero|0)[- ]?day
