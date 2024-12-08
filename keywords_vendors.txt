@@ -15,6 +15,7 @@ Cyderes
 Cylance
 Dark ?trace
 Deep ?watch
+Dmarcian
 Drata
 Duo ?Security
 DUST ?Identity
