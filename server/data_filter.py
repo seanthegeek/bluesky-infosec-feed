@@ -13,10 +13,18 @@ r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 
 
 def is_archive_record(record):
-    archived_threshold = datetime.timedelta(minutes=5)
+    # Sometimes users will import old posts from Twitter/X which con flood a feed with
+    # old posts. Unfortunately, the only way to test for this is to look an old
+    # created_at date. However, there are other reasons why a post might have an old
+    # date, such as firehose or firehose consumer outages. It is up to you, the feed
+    # creator to weigh the pros and cons, amd and optionally include this function in
+    # your filter conditions, and adjust the threshold to your liking.
+    #
+    # See https://github.com/MarshalX/bluesky-feed-generator/pull/21
+
+    archived_threshold = datetime.timedelta(days=1)
     created_at = datetime.datetime.fromisoformat(record.created_at)
     now = datetime.datetime.now(datetime.UTC)
-
     return now - created_at >= archived_threshold
 
 
