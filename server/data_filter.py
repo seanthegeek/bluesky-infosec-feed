@@ -25,7 +25,7 @@ def is_archive_record(record):
     archived_threshold = datetime.timedelta(days=1)
     created_at = datetime.datetime.fromisoformat(record.created_at)
     now = datetime.datetime.now(datetime.UTC)
-    return now - created_at >= archived_threshold
+    return now - created_at > archived_threshold
 
 
 def operations_callback(ops: defaultdict) -> None:
