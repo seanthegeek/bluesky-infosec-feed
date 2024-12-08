@@ -8,6 +8,7 @@ breach(ed|es)?
 bsides
 bug ?bount(y|ies)
 business ?email ?compromise
+casb
 cenys
 cisa
 ciso
@@ -19,6 +20,7 @@ ddos
 devsec(ops)?
 dkim
 dmarc
+edr
 exfil(tration|trates)?
 exploits?
 extortion ?sites?
@@ -75,3 +77,4 @@ wireshark
 xss
 yara
 (zero|0)[- ]?day
+(zero|0)[- ]?trust
