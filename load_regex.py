@@ -16,7 +16,13 @@ KEYWORD_LISTS = [{
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords_case_sensitive.txt",
     "filename": "keywords_case_sensitive.txt",
     "redis_key": "infosec_keywords_case_sensitive_regex"
-}]
+},
+{
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords_vendors.txt",
+    "filename": "keywords_vendors.txt",
+    "redis_key": "infosec_keywords_v_regex"
+}
+]
 
 
 def _create_regex_string(input_str: str):

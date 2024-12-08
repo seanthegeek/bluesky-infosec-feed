@@ -41,11 +41,14 @@ def operations_callback(ops: defaultdict) -> None:
         # only infosec-related posts
         regex_str = r.get("infosec_keywords_regex")
         case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
+        vendors_regex_str = r.get("infosec_keywords_vendors_regex", None)
         matches = []
         if regex_str is not None:
             matches += re.findall(regex_str, record.text, re.IGNORECASE)
         if case_sensitive_regex_str is not None:
             matches += re.findall(case_sensitive_regex_str, record.text)
+        if vendors_regex_str is not None:
+            matches+= re.findall(vendors_regex_str, re.IGNORECASE)
         # Ignore reply posts. Too many false positives.
         if len(matches) > 0 and not (record.reply or is_archive_record(record)):
             reply_root = reply_parent = None
