@@ -53,7 +53,7 @@ def include_post(author, record):
     if author in user_dids:
         return True
     if ignore_keywords_regex_str is not None:
-        if re.findall(ignore_keywords_regex_str, record.text, re.IGNORECASE) > 0:
+        if len(re.findall(ignore_keywords_regex_str, record.text, re.IGNORECASE)) > 0:
             return False
 
     matches = []
