@@ -18,10 +18,12 @@ Dark ?trace
 Deep ?watch
 Dmarcian
 Drata
+Dry Run Security
 Duo ?Security
 DUST ?Identity
 ESET(-)?(NOD32)?
 Exabeam
+Expel MMDR
 F5
 Fire ?Eye
 Forcepoint
@@ -45,6 +47,7 @@ Malwarebytes
 Mandiant
 McAfee
 Mimecast
+Monad Security
 Nessus
 Netskope
 Network ?Perception
@@ -72,6 +75,7 @@ Sophos
 Splunk
 Symantec
 Tenable
+Thinkst Canary
 Threat ?Quotient
 Trail ?of ?Bits
 Trellix

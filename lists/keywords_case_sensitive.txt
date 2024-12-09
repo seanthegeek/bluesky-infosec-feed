@@ -6,6 +6,7 @@ CTI
 DLP
 ISACs?
 MaaS
+MDR
 RaaS
 SOC
 TTPs?
