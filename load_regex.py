@@ -8,19 +8,19 @@ from server.logger import logger
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 
 KEYWORD_LISTS = [{
-    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords.txt",
-    "filename": "keywords.txt",
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/keywords.txt",
+    "filename": "lists/keywords.txt",
     "redis_key": "infosec_keywords_regex"
 },
 {
-    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords_case_sensitive.txt",
-    "filename": "keywords_case_sensitive.txt",
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/keywords_case_sensitive.txt",
+    "filename": "lists/keywords_case_sensitive.txt",
     "redis_key": "infosec_keywords_case_sensitive_regex"
 },
 {
-    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/keywords_vendors.txt",
-    "filename": "keywords_vendors.txt",
-    "redis_key": "infosec_keywords_v_regex"
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/keywords_vendors.txt",
+    "filename": "lists/keywords_vendors.txt",
+    "redis_key": "infosec_keywords_vendors_regex"
 }
 ]
 
