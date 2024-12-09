@@ -33,17 +33,17 @@ LISTS = [{
 {
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/ignore_keywords.csv",
     "filename": "lists/ignore_keywords.csv",
-    "redis_key": "infosec_keywords_ignore_keywords_regex"
+    "redis_key": "infosec_keywords_ignore_regex"
 },
 {
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/users.csv",
     "filename": "lists/users.csv",
-    "redis_key": "infosec_users_dids"
+    "redis_key": "infosec_user_dids"
 },
 {
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/ignore_users.csv",
     "filename": "lists/ignore_users.csv",
-    "redis_key": "infosec_ignore_users_dids"
+    "redis_key": "infosec_ignore_user_dids"
 }
 ]
 

@@ -32,9 +32,9 @@ def include_post(author, record):
     keywords_regex_str = r.get("infosec_keywords_regex")
     case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
     vendors_regex_str = r.get("infosec_keywords_vendors_regex")
-    ignore_keywords_regex_str = r.get("infosec_keywords_ignore_keywords_regex")
-    user_dids_str = r.get("infosec_users_dids")
-    ignore_user_dids_str = r.get("infosec_ignore_users_dids")
+    ignore_keywords_regex_str = r.get("infosec_keywords_ignore_regex")
+    user_dids_str = r.get("infosec_user_dids")
+    ignore_user_dids_str = r.get("infosec_ignore_user_dids")
     
     user_dids = []
     if user_dids_str is not None:
