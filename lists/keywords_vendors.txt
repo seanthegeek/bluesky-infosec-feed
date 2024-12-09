@@ -1,26 +1,34 @@
 Abnormal ?Security
 Armis
 Axio
+Bit ?Defender
 Bitglass
+BlackBerry
 Brinqa
+Carbon ?Black
 Chainguard
 Check Point
 Cisco
 Cloudflare
 Coalfire
 Cofence
+Cortex
 Crowd ?Strike
 Cyber ?Ark
 Cybereason
 Cyderes
 Cylance
+Cynet
 Dark ?trace
+Data ?dog
 Deep ?watch
 Dmarcian
 Drata
 Dry Run Security
 Duo ?Security
 DUST ?Identity
+Dynatrace
+Elastic ?Security
 ESET(-)?(NOD32)?
 Exabeam
 Expel MMDR
@@ -37,19 +45,26 @@ Immersive ?Labs
 Impart Security
 Imperva
 Imprivata
-Infoblox
+Info ?blox
+Insight ?IDR
 Intel 471
 Ivanti
 Jump ?Cloud
 KnowBe4
+Log ? point
+Log ?Rhythm
 Log ?Rhythm
 Malwarebytes
 Mandiant
 McAfee
+Microsoft ?Defender
 Mimecast
 Monad Security
+Morphisec
+Nagios
 Nessus
 Netskope
+Net ?Witness
 Network ?Perception
 Nexusguard
 Nisos
@@ -59,21 +74,27 @@ One Identity
 OneLogin
 OneSpan
 One ?Trust
+Open ?texts
 Palo ?Alto ?Networks
 Ping ?Identity
 Proofpoint
+QRadar
 Rapid7
-Recorded Future
+Recorded ?Future
 Red ?Canary
 RiskIQ
 RSA ?Security
 Sail ?Point
 SecureWorks
+Securonix
 Semgrep
 Sentinal ?One
+Sentinel ?One
+Solar ?Winds
 Sophos
 Splunk
 Symantec
+Tanium
 Tenable
 Thinkst Canary
 Threat ?Quotient
@@ -85,6 +106,7 @@ Tufin
 Valimail
 Varonis
 VMWare
+Watch ?Guard
 Webroot
 Wiz
 Zscaler
