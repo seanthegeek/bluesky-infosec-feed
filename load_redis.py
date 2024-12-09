@@ -33,7 +33,7 @@ LISTS = [{
 {
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/ignore_keywords.csv",
     "filename": "lists/ignore_keywords.csv",
-    "redis_key": "infosec_keywords_ignore_regex"
+    "redis_key": "infosec_ignore_keywords_regex"
 },
 {
     "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/users.csv",
