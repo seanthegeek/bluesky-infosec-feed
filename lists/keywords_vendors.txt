@@ -12,7 +12,6 @@ Cisco
 Cloudflare
 Coalfire
 Cofence
-Cortex
 Crowd ?Strike
 Cyber ?Ark
 Cybereason
