@@ -3,6 +3,7 @@ Armis
 Axio
 Bitglass
 Brinqa
+Chainguard
 Check Point
 Cisco
 Cloudflare
@@ -31,6 +32,7 @@ Hacker ?One
 Huntress
 Hypori
 Immersive ?Labs
+Impart Security
 Imperva
 Imprivata
 Infoblox
@@ -64,6 +66,7 @@ RiskIQ
 RSA ?Security
 Sail ?Point
 SecureWorks
+Semgrep
 Sentinal ?One
 Sophos
 Splunk
@@ -79,4 +82,5 @@ Valimail
 Varonis
 VMWare
 Webroot
+Wiz
 Zscaler

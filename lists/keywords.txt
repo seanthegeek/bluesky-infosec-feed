@@ -3,6 +3,8 @@ att&ck
 backdoor
 (blue|red|purple) ?team(ing)?
 bootkits?
+botmasters?
+botnets?
 breach(ed|es)?
 bsides
 bug ?bount(y|ies)
