@@ -69,7 +69,7 @@ social(ly)? ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
-threat ?(actors?|intel(ligence)?)
+threat ?(actors?|hunter(s|ing)?|intel(ligence)?)
 virus ?total
 vulnerabilit(y|ies)
 waf
