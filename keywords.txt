@@ -12,7 +12,7 @@ casb
 cenys
 cisa
 ciso
-(cloud|cyber|computer|network|digital|ot|iot) ?(security|crime|criminals?|attacks?|sec|law|forensics?|espionage|threats?|incidents?|intel(ligence)?)
+(cloud|cyber|computer|network|digital|ot|iot) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|forensics?|espionage|threats?|incidents?|intel(ligence)?)
 cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
 cves?
 (cyber ?)?threat ?(actors?|hunt(er|ers|ing)?|intel(ligence)?)
