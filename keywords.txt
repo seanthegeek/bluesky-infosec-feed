@@ -45,7 +45,7 @@ malware
 ((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stolen?|compromised?)
 mitre
 ncsc
-n-?day
+n[- ]?day
 opsec
 osint
 otsec
