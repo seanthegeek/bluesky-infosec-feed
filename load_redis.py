@@ -71,6 +71,7 @@ def load_redis(url:str, filename:str, redis_key:str):
                 value = keywords_file.read()
     if filename.lower().endswith ("ignore_keywords.csv"):
         with StringIO(value, newline="\n") as csv_file:
+            value = ""
             ignore_keywords_csv = csv.DictReader(csv_file)
             for row in ignore_keywords_csv:
                 value+= f"{row['regex']}\n"
@@ -78,6 +79,7 @@ def load_redis(url:str, filename:str, redis_key:str):
         value = _create_regex_string(value)
     elif filename.lower().endswith("users.csv"):
         with StringIO(value, newline="\n") as csv_file:
+            value = ""
             user_csv = csv.DictReader(csv_file)
             dids = []
             for row in user_csv:
