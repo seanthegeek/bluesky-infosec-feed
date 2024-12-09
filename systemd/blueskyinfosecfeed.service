@@ -7,7 +7,7 @@ After=network.target network-online.target redis-server.service
 [Service]
 Type=exec
 WorkingDirectory=/opt/blueskyinfosecfeed/bluesky-infosec-feed
-ExecStartPre=/opt/blueskyinfosecfeed/bluesky-infosec-feed/venv/bin/python3 load_regex.py
+ExecStartPre=/opt/blueskyinfosecfeed/bluesky-infosec-feed/venv/bin/python3 load_redis.py
 ExecStart=/opt/blueskyinfosecfeed/bluesky-infosec-feed/venv/bin/waitress-serve --listen=127.0.0.1:8080 server.app:app
 User=blueskyinfosecfeed
 Group=blueskyinfosecfeed
