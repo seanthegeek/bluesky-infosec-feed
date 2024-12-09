@@ -1,7 +1,8 @@
 import redis
 
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
-keys = ["infosec_keywords_regex", "infosec_keywords_case_sensitive_regex"]
+keys = ["infosec_keywords_regex", "infosec_keywords_case_sensitive_regex",
+        "infosec_keywords_vendors_regex"]
 for key in keys:
     value = r.get(key)
     if value:
