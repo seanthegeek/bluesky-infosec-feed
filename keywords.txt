@@ -8,11 +8,11 @@ bsides
 bug ?bount(y|ies)
 business ?email ?compromise
 casb
-cenys
+censys
 cisa
 ciso
 (cloud|cyber|computer|network|digital|ot|iot) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|forensics?|espionage|threats?|incidents?|intel(ligence)?)
-cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
+cred(ential)?s? ?(harvest(ed|ing)?|stolen)
 cves?
 (cyber ?)?threat ?(actors?|hunt(er|ers|ing)?|intel(ligence)?)
 dark ?web
