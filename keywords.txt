@@ -1,7 +1,6 @@
 (adversary|man)[- ]?in[- ]?the[- ]?(middle|mailbox)
 att&ck
 backdoor
-bide
 (blue|red|purple) ?team(ing)?
 bootkits?
 breach(ed|es)?
