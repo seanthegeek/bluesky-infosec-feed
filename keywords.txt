@@ -15,6 +15,7 @@ ciso
 (cloud|cyber|computer|network|digital|ot|iot) ?(security|crime|criminals?|attacks?|sec|law|forensics?|espionage|threats?|incidents?|intel(ligence)?)
 cred(ential)?s? ?(harvest|harvested|harvesting|stolen)
 cves?
+(cyber ?)?threat ?(actors?|hunt(er|ers|ing)?|intel(ligence)?)
 dark ?web
 ddos
 devsec(ops)?
@@ -69,7 +70,6 @@ social(ly)? ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
-threat ?(actors?|hunter(s|ing)?|intel(ligence)?)
 virus ?total
 vulnerabilit(y|ies)
 waf
