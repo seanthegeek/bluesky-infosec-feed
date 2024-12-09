@@ -49,10 +49,9 @@ opsec
 osint
 otsec
 owasp
-packet capture
+((packet ?capture)|pcap)
 password ?spray
 patch ?tuesday
-pcap
 pen(etration)?[ -]?test(s|er|ers|ing)?
 (ph|sm|v)ish(ing|er|ers)?
 ransomware
