@@ -8,5 +8,6 @@ ISACs?
 MaaS
 MDR
 RaaS
+SOAR
 SOC
 TTPs?
