@@ -2,6 +2,7 @@
 APTs?
 BEC
 CERTs?
+CTI
 DLP
 ISACs?
 MaaS
