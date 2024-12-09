@@ -54,7 +54,7 @@ packet capture
 password ?spray
 patch ?tuesday
 pcap
-pentest(ing)?
+pentest(s|er|ers|ing)?
 (ph|sm|v)ish(ing|er|ers)?
 ransomware
 remnux
