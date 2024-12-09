@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import csv
+from io import StringIO
 
 import atproto_identity.resolver
 import requests
@@ -35,9 +36,14 @@ LISTS = [{
     "redis_key": "infosec_keywords_ignore_keywords_regex"
 },
 {
-    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/ignore_users.csv",
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/users.csv",
     "filename": "lists/users.csv",
-    "redis_key": "infosec_users_regex"
+    "redis_key": "infosec_users_dids"
+},
+{
+    "url": "https://github.com/seanthegeek/bluesky-infosec-feed/raw/refs/heads/main/lists/ignore_users.csv",
+    "filename": "lists/ignore_users.csv",
+    "redis_key": "infosec_ignore_users_dids"
 }
 ]
 
@@ -63,27 +69,26 @@ def load_redis(url:str, filename:str, redis_key:str):
         logger.error(f"Failed to download {url} - {e}. Falling back to local file {filename}.")
         with open(filename) as keywords_file:
                 value = keywords_file.read()
-    
-    if filename.lower().endswith("users.csv"):
-        user_csv = csv.DictReader(value,
-                                  fieldnames=["handle", "reason"])
-        for row in user_csv:
-            dids = []
-            handle = row["handle"].lstrip("@")
-            did = did_resolver.resolve(handle)
-            if did:
-                dids.append(did)
-        value = ",".join(dids)
-    elif filename.lower() == "ignore_keywords.csv":
-        ignore_keywords_csv = csv.DictReader(value,
-                                             ["regex", "reason"])
-        value = ""
-        for row in ignore_keywords_csv:
-            value+= ignore_keywords_csv["regex"]
+    if filename.lower().endswith ("ignore_keywords.csv"):
+        with StringIO(value, newline="\n") as csv_file:
+            ignore_keywords_csv = csv.DictReader(csv_file)
+            for row in ignore_keywords_csv:
+                value+= f"{row['regex']}\n"
         value = value.strip()
-
+        value = _create_regex_string(value)
+    elif filename.lower().endswith("users.csv"):
+        with StringIO(value, newline="\n") as csv_file:
+            user_csv = csv.DictReader(csv_file)
+            dids = []
+            for row in user_csv:
+                handle = row["handle"].lstrip("@")
+                did = did_resolver.resolve(handle)
+                if did:
+                    dids.append(did)
+            value = ",".join(dids)
     else:
         value = _create_regex_string(value)
+
     r.set(redis_key, value)
 
 

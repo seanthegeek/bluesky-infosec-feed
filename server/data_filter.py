@@ -29,19 +29,36 @@ def is_archive_record(record):
 
 
 def include_post(author, record):
-    regex_str = r.get("infosec_keywords_regex")
+    keywords_regex_str = r.get("infosec_keywords_regex")
     case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
     vendors_regex_str = r.get("infosec_keywords_vendors_regex")
+    ignore_keywords_regex_str = r.get("infosec_keywords_ignore_keywords_regex")
+    user_dids_str = r.get("infosec_users_dids")
+    ignore_user_dids_str = r.get("infosec_ignore_users_dids")
+    
+    user_dids = []
+    if user_dids_str is not None:
+        user_dids = user_dids_str.split(",")
+    ignore_user_dids = []
+    if ignore_user_dids_str is not None:
+        ignore_user_dids = ignore_user_dids_str.split(",")
 
     if record.reply:
         # Reply posts show the whole thread, and show too many unrelated posts
         return False
     if is_archive_record(record):
         return False
+    if author in ignore_user_dids:
+        return False
+    if author in user_dids:
+        return True
+    if ignore_keywords_regex_str is not None:
+        if re.findal(ignore_keywords_regex_str, record.text, re.IGNORECASE) > 0:
+            return False
 
     matches = []
-    if regex_str is not None:
-        matches += re.findall(regex_str, record.text, re.IGNORECASE)
+    if keywords_regex_str is not None:
+        matches += re.findall(keywords_regex_str, record.text, re.IGNORECASE)
     if case_sensitive_regex_str is not None:
         matches += re.findall(case_sensitive_regex_str, record.text)
     if vendors_regex_str is not None:
