@@ -35,7 +35,7 @@ infosec(urity)?
 iotsec
 kali ?linux
 kerberoasting
-(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
+(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|phones?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
 leak ?site
 lolbins?
 lolbras?
