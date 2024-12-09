@@ -28,6 +28,30 @@ def is_archive_record(record):
     return now - created_at > archived_threshold
 
 
+def include_post(author, record):
+    regex_str = r.get("infosec_keywords_regex")
+    case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
+    vendors_regex_str = r.get("infosec_keywords_vendors_regex")
+
+    if record.reply:
+        # Reply posts show the whole thread, and show too many unrelated posts
+        return False
+    if is_archive_record(record):
+        return False
+
+    matches = []
+    if regex_str is not None:
+        matches += re.findall(regex_str, record.text, re.IGNORECASE)
+    if case_sensitive_regex_str is not None:
+        matches += re.findall(case_sensitive_regex_str, record.text)
+    if vendors_regex_str is not None:
+        matches+= re.findall(vendors_regex_str, record.text, re.IGNORECASE)
+
+    if len(matches) > 0:
+        return True
+
+    return False
+
 def operations_callback(ops: defaultdict) -> None:
     # Here we can filter, process, run ML classification, etc.
     # After our feed alg we can save posts into our DB
@@ -38,19 +62,7 @@ def operations_callback(ops: defaultdict) -> None:
         author = created_post['author']
         record = created_post['record']
 
-        # only infosec-related posts
-        regex_str = r.get("infosec_keywords_regex")
-        case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
-        vendors_regex_str = r.get("infosec_keywords_vendors_regex")
-        matches = []
-        if regex_str is not None:
-            matches += re.findall(regex_str, record.text, re.IGNORECASE)
-        if case_sensitive_regex_str is not None:
-            matches += re.findall(case_sensitive_regex_str, record.text)
-        if vendors_regex_str is not None:
-            matches+= re.findall(vendors_regex_str, re.IGNORECASE)
-        # Ignore reply posts. Too many false positives.
-        if len(matches) > 0 and not (record.reply or is_archive_record(record)):
+        if include_post(author,  record):
             reply_root = reply_parent = None
             if record.reply:
                 reply_root = record.reply.root.uri
