@@ -13,7 +13,7 @@ casb
 censys
 cisa
 ciso
-(cloud|cyber|computer|network|digital|ot|iot) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|regulations?|risks?|forensics?|espionage|threats?|incidents?|intel(ligence)?)
+(cloud|cyber|computer|network|digital|ot|iot|supply[ -]?chain) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|regulations?|risks?|forensics?|espionage|threats?|incidents?|intel(ligence)?)
 cred(ential)?s? ?(harvest(ed|ing)?|stolen)
 cves?
 (cyber ?)?threat ?(actors?|hunt(er|ers|ing)?|intel(ligence)?)
@@ -37,13 +37,14 @@ infosec(urity)?
 iotsec
 kali ?linux
 kerberoasting
-(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|phones?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?)
+(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|phones?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?)
 leak ?site
 lolbins?
 lolbras?
 malvertizing
 malware
-((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|cred(ential)?s?) ?(theft|leak(ed)?|stolen?|compromised?)
+(malware)?reverse ?engineer(ing)?(malware)?
+((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?) ?(theft|leak(ed)?|stolen?|compromised?)
 mitre
 ncsc
 n[- ]?day
@@ -58,7 +59,6 @@ pen(etration)?[ -]?test(s|er|ers|ing)?
 (ph|sm|v)ish(ing|er|ers)?
 ransomware
 remnux
-reverse ?engineer(ing)?
 rootkits?
 security ?awareness
 shame[ -]?sites?
