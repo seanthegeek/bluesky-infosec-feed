@@ -6,6 +6,7 @@ bootkits?
 botmasters?
 botnets?
 breach(ed|es)?
+(brute[- ]?force|replay)[- ]?(attacks?passwords?|credentials?)
 bsides
 bug ?bount(y|ies)
 business ?email ?compromise
