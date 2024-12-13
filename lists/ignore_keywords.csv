@@ -1,4 +1,5 @@
 regex,reason
 Bruno ?Mars,APT is a popular song by ROSÉ and Bruno Mars and rose is too common to ignore
-nowplaying,Used as a hash tag by radio - avoid FP with the word phish the band name
+nowplaying,Used as a hash tag by radio; Try to ignore posts about the rock band Phish
+phish ?(songs?|concerts?|tickets?),Try to ignore posts about the rock band Phish
 RECOVERY200,Ignore hacked account social engineering spam https://bsky.app/profile/seanthegeek.net/post/3ld74yxlolk2v
