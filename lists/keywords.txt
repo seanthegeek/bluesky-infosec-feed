@@ -1,4 +1,5 @@
 (adversary|man)[- ]?in[- ]?the[- ]?(middle|mailbox)
+app(lication)? ?sec(urity)?
 att&ck
 backdoor
 (blue|red|purple) ?team(ing)?
