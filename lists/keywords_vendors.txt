@@ -3,7 +3,6 @@ Armis
 Axio
 Bit ?Defender
 Bitglass
-BlackBerry
 Brinqa
 Carbon ?Black
 Chainguard
@@ -30,13 +29,14 @@ Dynatrace
 Elastic ?Security
 ESET
 Exabeam
-Expel MMDR
+Expel MDR
 F5
 Fire ?Eye
 Forcepoint
 Fortinet
 Fusion ?Auth
 GData
+Gray ?Log
 Hacker ?One
 Huntress
 Hypori
