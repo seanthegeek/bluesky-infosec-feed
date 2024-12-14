@@ -1,10 +1,13 @@
 Abnormal ?Security
 Armis
 Axio
+(Binary ?Ninja|Binja)
 Bit ?Defender
 Bitglass
 Brinqa
+Broadcom
 Carbon ?Black
+Censys
 Chainguard
 Check Point
 Cisco
@@ -36,10 +39,13 @@ Forcepoint
 Fortinet
 Fusion ?Auth
 GData
+Ghidra
+Google ?(Chronicle|Security ?Operations)
 Gray ?Log
 Hacker ?One
 Huntress
 Hypori
+IDA ?Pro
 Immersive ?Labs
 Impart Security
 Imperva
@@ -49,13 +55,16 @@ Insight ?IDR
 Intel 471
 Ivanti
 Jump ?Cloud
+Kali ?Linux
 KnowBe4
 Log ? point
 Log ?Rhythm
 Log ?Rhythm
+Manage ?Engine
 Malwarebytes
 Mandiant
 McAfee
+Metasploit
 Microsoft ?Defender
 Mimecast
 Monad Security
@@ -89,6 +98,7 @@ Securonix
 Semgrep
 Sentinal ?One
 Sentinel ?One
+Shodan
 Solar ?Winds
 Sophos
 Splunk
@@ -104,6 +114,7 @@ Trustwave
 Tufin
 Valimail
 Varonis
+Virus ?Total
 VMWare
 Watch ?Guard
 Webroot

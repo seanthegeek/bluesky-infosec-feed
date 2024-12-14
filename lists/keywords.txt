@@ -11,7 +11,6 @@ bsides
 bug ?bount(y|ies)
 business ?email ?compromise
 casb
-censys
 cisa
 ciso
 (cloud|cyber|computer|network|digital|ot|iot|supply[ -]?chain) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|regulations?|risks?|forensics?|espionage|threats?|incidents?|intel(ligence)?)
@@ -28,15 +27,13 @@ exfil(tration|trates)?
 exploits?
 extortion ?sites?
 firewall
-ghidra
 hacked
 hackers?
-ida ?pro
+identity ?(and ? access)? ? management
 (incident ?response|ir ?teams?)
 info(rmation)? ?(security|stealer)
 infosec(urity)?
 iotsec
-kali ?linux
 kerberoasting
 (leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|phones?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?)
 leak ?site
@@ -63,7 +60,6 @@ remnux
 rootkits?
 security ?awareness
 shame[ -]?sites?
-shodan
 siem
 sigma ?rules?
 sim ?swap(ping)?
@@ -71,7 +67,6 @@ social(ly)? ?engineer(ing|ed)?
 spyware
 sql ?injection
 suricata
-virus ?total
 vulnerabilit(y|ies)
 waf
 web ?shell
