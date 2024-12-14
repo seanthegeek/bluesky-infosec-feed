@@ -28,7 +28,7 @@ Duo ?Security
 DUST ?Identity
 Dynatrace
 Elastic ?Security
-ESET(-)?(NOD32)?
+ESET
 Exabeam
 Expel MMDR
 F5
