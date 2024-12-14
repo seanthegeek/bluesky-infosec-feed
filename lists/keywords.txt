@@ -52,7 +52,7 @@ osint
 otsec
 owasp
 ((packet ?capture)|pcap)
-password ?spray
+password[ -]?spra(y|ing|er|ied)
 patch ?tuesday
 pen(etration)?[ -]?test(s|er|ers|ing)?
 (ph|sm|v)ish(ing|er|ers)?
