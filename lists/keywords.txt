@@ -61,6 +61,7 @@ rootkits?
 security ?awareness
 shame[ -]?sites?
 siem
+sigint
 sigma ?rules?
 sim ?swap(ping)?
 social(ly)? ?engineer(ing|ed)?
