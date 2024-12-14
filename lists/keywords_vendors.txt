@@ -5,7 +5,6 @@ Axio
 Bit ?Defender
 Bitglass
 Brinqa
-Broadcom
 Carbon ?Black
 Censys
 Chainguard
