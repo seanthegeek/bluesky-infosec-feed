@@ -60,6 +60,7 @@ ransomware
 remnux
 rootkits?
 security ?awareness
+seo ?poisoning
 shame[ -]?sites?
 siem
 sigint
