@@ -22,7 +22,7 @@ def is_archive_record(record):
     #
     # See https://github.com/MarshalX/bluesky-feed-generator/pull/21
 
-    archived_threshold = datetime.timedelta(days=1)
+    archived_threshold = datetime.timedelta(minutes=1)
     created_at = datetime.datetime.fromisoformat(record.created_at)
     now = datetime.datetime.now(datetime.UTC)
     return now - created_at > archived_threshold
