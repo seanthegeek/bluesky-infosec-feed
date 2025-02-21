@@ -12,7 +12,7 @@ ExecStart=/opt/blueskyinfosecfeed/bluesky-infosec-feed/venv/bin/waitress-serve -
 User=blueskyinfosecfeed
 Group=blueskyinfosecfeed
 Restart=always
-RestartSec=5m
+RestartSec=1s
 
 [Install]
 WantedBy=multi-user.target
