@@ -4,6 +4,7 @@ from collections import defaultdict
 
 from atproto import models
 
+from server import config
 from server.logger import logger
 from server.database import db, Post
 
@@ -12,7 +13,7 @@ import redis
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 
 
-def is_archive_record(record):
+def is_archive_post(record):
     # Sometimes users will import old posts from Twitter/X which con flood a feed with
     # old posts. Unfortunately, the only way to test for this is to look an old
     # created_at date. However, there are other reasons why a post might have an old
@@ -27,6 +28,17 @@ def is_archive_record(record):
     now = datetime.datetime.now(datetime.UTC)
     return now - created_at > archived_threshold
 
+
+def should_ignore_post(record: 'models.AppBskyFeedPost.Record') -> bool:
+    if config.IGNORE_ARCHIVED_POSTS and is_archive_post(record):
+        logger.debug(f'Ignoring archived post: {record.uri}')
+        return True
+
+    if config.IGNORE_REPLY_POSTS and record.reply:
+        logger.debug(f'Ignoring reply post: {record.uri}')
+        return True
+
+    return False
 
 def include_post(author, record):
     keywords_regex_str = r.get("infosec_keywords_regex")
@@ -43,10 +55,7 @@ def include_post(author, record):
     if ignore_user_dids_str is not None:
         ignore_user_dids = ignore_user_dids_str.split(",")
 
-    if record.reply:
-        # Reply posts show the whole thread, and show too many unrelated posts
-        return False
-    if is_archive_record(record):
+    if should_ignore_post(record):
         return False
     if author in ignore_user_dids:
         return False
