@@ -31,7 +31,7 @@ The filter for posts is located in [`server/data_filter.py`](https://github.com/
 
 The Flask app in executed as a `systemd` service to ensure that it runs on boot after the Redis service starts and is always restarted in the event of a crash. The Flask app is served by [`waitress`](https://flask.palletsprojects.com/en/stable/deploying/waitress/), which sits behind a NGINX reverse proxy.
 
-Everything runs on a Digital Ocean Droplet with 2 GB of RAM, 1 shared vCPU, and 50 GB of SSD storage for a cost of $12/month. Only 377 MB of RAM and 2.5 GB of storage is in use, so I probably could have gone with the smaller $6/month droplet.
+Everything runs on a Digital Ocean Droplet with 2 GB of RAM, 2 shared vCPU, and 50 GB of SSD storage for a cost of $12/month. Only 377 MB of RAM and 2.5 GB of storage is in use. I wish Digital Ocean had a cheaper  option with 2 vCPUs and less RAM.
 
 ## Pull Requests are welcome
 
