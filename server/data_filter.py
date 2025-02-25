@@ -29,16 +29,23 @@ def is_archive_post(record):
     return now - created_at > archived_threshold
 
 
-def should_ignore_post(record: 'models.AppBskyFeedPost.Record') -> bool:
+def should_ignore_post(created_post: dict) -> bool:
+    record = created_post['record']
+    uri = created_post['uri']
     if config.IGNORE_ARCHIVED_POSTS and is_archive_post(record):
+        logger.debug(f'Ignoring archived post: {uri}')
         return True
 
     if config.IGNORE_REPLY_POSTS and record.reply:
+        logger.debug(f'Ignoring reply post: {uri}')
         return True
 
     return False
 
-def include_post(author, record):
+def include_post(created_post):
+    author = created_post["author"]
+    record = created_post["record"]
+
     keywords_regex_str = r.get("infosec_keywords_regex")
     case_sensitive_regex_str = r.get("infosec_keywords_case_sensitive_regex")
     vendors_regex_str = r.get("infosec_keywords_vendors_regex")
@@ -53,7 +60,7 @@ def include_post(author, record):
     if ignore_user_dids_str is not None:
         ignore_user_dids = ignore_user_dids_str.split(",")
 
-    if should_ignore_post(record):
+    if should_ignore_post(created_post):
         return False
     if author in ignore_user_dids:
         return False
