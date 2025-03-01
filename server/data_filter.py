@@ -93,7 +93,7 @@ def operations_callback(ops: defaultdict) -> None:
         author = created_post['author']
         record = created_post['record']
 
-        if include_post(author,  record):
+        if include_post(created_post):
             reply_root = reply_parent = None
             if record.reply:
                 reply_root = record.reply.root.uri
