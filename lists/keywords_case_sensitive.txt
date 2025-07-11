@@ -6,10 +6,10 @@ CTI
 DLP
 IAM
 ISACs?
-MaaS
 MDR
-RaaS
+MaaS
 RCEs?
+RaaS
 SOAR
 SOC
 TTPs?

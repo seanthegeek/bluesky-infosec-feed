@@ -1,7 +1,7 @@
+(Binary ?Ninja|Binja)
 Abnormal ?Security
 Armis
 Axio
-(Binary ?Ninja|Binja)
 Bit ?Defender
 Bitglass
 Brinqa
@@ -19,6 +19,7 @@ Cybereason
 Cyderes
 Cylance
 Cynet
+DUST ?Identity
 Dark ?trace
 Data ?dog
 Deep ?watch
@@ -26,10 +27,9 @@ Dmarcian
 Drata
 Dry Run Security
 Duo ?Security
-DUST ?Identity
 Dynatrace
-Elastic ?Security
 ESET
+Elastic ?Security
 Exabeam
 Expel MDR
 F5
@@ -70,27 +70,27 @@ Monad Security
 Morphisec
 Nagios
 Nessus
-Netskope
 Net ?Witness
+Netskope
 Network ?Perception
 Nexusguard
 Nisos
 Nozomi ?Networks
 Okta
+One ?Trust
 One Identity
 OneLogin
 OneSpan
-One ?Trust
 Open ?texts
 Palo ?Alto ?Networks
 Ping ?Identity
 Proofpoint
 QRadar
+RSA ?Security
 Rapid7
 Recorded ?Future
 Red ?Canary
 RiskIQ
-RSA ?Security
 Sail ?Point
 SecureWorks
 Securonix
@@ -111,10 +111,10 @@ Trellix
 Trend ?Micro
 Trustwave
 Tufin
+VMWare
 Valimail
 Varonis
 Virus ?Total
-VMWare
 Watch ?Guard
 Webroot
 Wiz

@@ -1,23 +1,31 @@
+((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?) ?(theft|leak(ed)?|stolen?|compromised?)
+((packet ?capture)|pcap)
 (adversary|man)[- ]?in[- ]?the[- ]?(middle|mailbox)
+(blue|red|purple) ?team(ing)?
+(brute[- ]?force|replay)[- ]?(attacks?passwords?|credentials?)
+(cloud|cyber|computer|network|digital|ot|iot|supply[ -]?chain) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|regulations?|risks?|forensics?|espionage|threats?|incidents?|intel(ligence)?)
+(cyber ?)?threat ?(actors?|hunt(er|ers|ing)?|intel(ligence)?)
+(incident ?response|ir ?teams?)
+(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|phones?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?)
+(malware)?reverse ?engineer(ing)?(malware)?
+(ph|sm|v)ish(ing|er|ers)?
+(zero|0)[- ]?day
+(zero|0)[- ]?trust
 app(lication)? ?sec(urity)?
 att&ck
 backdoor
-(blue|red|purple) ?team(ing)?
 bootkits?
 botmasters?
 botnets?
 breach(ed|es)?
-(brute[- ]?force|replay)[- ]?(attacks?passwords?|credentials?)
 bsides
 bug ?bount(y|ies)
 business ?email ?compromise
 casb
 cisa
 ciso
-(cloud|cyber|computer|network|digital|ot|iot|supply[ -]?chain) ?(sec(urity)?|crime|criminals?|attacks?|law|polic(y|ies)|regulations?|risks?|forensics?|espionage|threats?|incidents?|intel(ligence)?)
 cred(ential)?s? ?(harvest(ed|ing)?|stolen)
 cves?
-(cyber ?)?threat ?(actors?|hunt(er|ers|ing)?|intel(ligence)?)
 dark ?web
 ddos
 devsec(ops)?
@@ -31,37 +39,32 @@ firewall
 hacked
 hackers?
 identity ?(and ? access)? ? management
-(incident ?response|ir ?teams?)
 info(rmation)? ?(security|stealer)
 infosec(urity)?
 iotsec
 kerberoasting
-(leak(ed)?|stolen?|compromised?) ?((meta)?data|files?|emails?|documents?|photos?|images?|calls?|phones?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?)
 leak ?site
 lolbins?
 lolbras?
 malvertizing
 malware
-(malware)?reverse ?engineer(ing)?(malware)?
-((meta)?data|files?|emails?|documents?|photos?|images?|calls?|voicemails?|texts|sms|recordings?|videos?|source[ -]?code|(trade[- ]?)?secrets?|cred(ential)?s?) ?(theft|leak(ed)?|stolen?|compromised?)
 mitre
-ncsc
 n[- ]?day
+ncsc
 opsec
 osint
 otsec
 owasp
-((packet ?capture)|pcap)
 password[ -]?spra(y|ing|er|ied)
 patch ?tuesday
 pen(etration)?[ -]?test(s|er|ers|ing)?
-(ph|sm|v)ish(ing|er|ers)?
 ransomware
 remnux
 rootkits?
 security ?awareness
 seo ?poisoning
 shame[ -]?sites?
+shell ?code
 siem
 sigint
 sigma ?rules?
@@ -76,5 +79,3 @@ web ?shell
 wireshark
 xss
 yara
-(zero|0)[- ]?day
-(zero|0)[- ]?trust
